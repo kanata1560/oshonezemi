@@ -1,0 +1,297 @@
+
+$pc: 680px;
+
+//全体のスタイル
+
+body {
+  font-size: 12px;
+  color: #333333;
+  line-height: 1.5;
+  a{
+    color: #333333;
+    text-decoration: none;
+  }
+}
+
+h1 {
+  font-size: 20px;
+}
+
+h2 {
+  margin-top: 20px;
+  padding-bottom: 20px;
+  font-size: 16px;
+  text-align: center;
+}
+
+h3 {
+  padding-bottom: 10px;
+  font-size: 14px;
+  text-align: center;
+}
+
+section {
+  padding-bottom: 10px;
+}
+
+section > div {
+  width: 95%;
+  margin: 0 auto;
+}
+
+.green-underline {
+  background:linear-gradient(transparent 70%, #8dc031 0%);
+}
+
+.orange-color {
+  color: #FF9933;
+}
+
+.underline {
+  border-bottom: 1px solid #a1a499;
+  padding-bottom: 5px;
+}
+//全体のスタイル
+
+//header
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  padding: 0 11px 0 11px;
+}
+
+nav {
+  position: absolute;
+  z-index: 5;
+  padding-top: 60px;
+  top: 0px;
+  left: 0;
+  width: 100%;
+  background-color: rgba(204, 204, 204, 1);
+  transform: translateY(-140%);
+  transition: all 300ms 0s ease;
+}
+
+nav.active {
+  transition: all 500ms 0s ease;
+  transform: translateY(0%);
+  z-index: 5;
+}
+
+
+.header-nav {
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 90%;
+    margin-left: 8%;
+    li {
+      width: 45%;
+      font-size: 20px;
+      line-height: 2.5;
+    }
+  }
+}
+
+.header-nav li {
+  ::before {
+  content: '';
+  display: block;
+  background: #BD0404;
+  height: 1px;
+  width: 20px;
+  margin-bottom: -5px;
+  }
+}
+
+.nav-button, .nav-button span {
+  transition: all .4s;
+  // box-sizing: border-box;
+  // margin-right: 20px;
+  z-index: 3;
+}
+
+
+.nav-button {
+  position: relative;
+  width: 64px;
+  height: 60px;
+  // background-color: #8dc031;
+  background-color: rgba(141,192,49,1);
+  p {
+    position: absolute;
+    text-align: center;
+    color: #fff;
+    left: 13px;
+    top: 40px;
+  }
+  span {
+    position: absolute;
+    height: 2px;
+    background-color: #fff;
+    top: 11px;
+    left: 16px;
+    width: 50%;
+    &:nth-child(2) {
+      top: 22px;
+    }
+    &:nth-child(3) {
+      top: 33px;
+    }
+  }
+}
+
+.nav-button.active {
+  transition: all 300ms 0s ease;
+  z-index: 5;
+  background-color: rgba(141,192,49,0);
+  span:nth-child(1) {
+    transform: rotateZ(-45deg);
+    transform-origin: top right;
+    left: 5px;
+    background-color: #333333;
+  }
+  span:nth-child(2) {
+    opacity: 0;
+  }
+  span:nth-child(3) {
+    transform: rotateZ(45deg);
+    transform-origin: bottom right;
+    left: 5px;
+    background-color: #333333;
+  }
+  p {
+    opacity: 0;
+  }
+}
+
+//header
+
+footer {
+  height: 400px;
+}
+
+
+// index
+
+.top {
+  width: 375px;
+  height: 282px;
+  .top-main-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+} //top
+
+
+.news {
+  .news-wrap:not(:last-of-type) {
+    padding-bottom: 10px;
+  }
+} //news
+
+.second {
+  background-color: #f3f3f3;
+  .second-public-seminar {
+    padding-bottom: 10px;
+  }
+  .second-content:not(:last-of-type) {
+    padding-bottom: 10px;
+  }
+}
+
+// index　fin
+
+//intro
+
+.intro-begin, .intro-qa {
+  p {
+    margin: 1em 0;
+  }
+}
+
+//intro fin
+
+//ohsone
+
+.sense-main {
+  ul {
+    list-style: initial;
+    padding-left: 20px;
+  }
+  dl {
+    margin: 1em 0;
+  }
+  table {
+    width: 300px;
+  }
+}
+
+.second-message-content {
+  p {
+    margin: 1em 0;
+  }
+}
+
+//ohsone fin
+
+//student
+
+.student-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.student-content--box {
+  width: 47%;
+  height: auto;
+  border: 1px solid #8dc031;
+  border-radius: 5px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0;
+}
+
+.student-content--box:not(:nth-child(-n+2)) {
+  margin-top: 20px;
+}
+
+.student-name {
+  font-size: 16px;
+  text-align: center;
+}
+
+.student-imgwrap {
+  text-align: center;
+}
+
+.student-icon {
+  margin-top: 15px;
+  width: 70px;
+  height: auto;
+  border-radius: 50%;
+}
+
+.student-desc {
+  width: 90%;
+  margin: 15px auto 0;
+}
+
+//student fin
+
+//event
+
+.event-main--wrap {
+  img {
+    width: 100%;
+  }
+}
+
+//event fin
